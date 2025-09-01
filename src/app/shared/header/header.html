@@ -1,0 +1,36 @@
+<nav class="px-2 py-3 d-flex justify-content-between align-items-center nav-color">
+  <div class="d-flex justify-content-center align-items-center gap-2">
+    <i
+      class="fa-solid fa-bars font-30 d-sm-flex d-lg-none"
+      (click)="openStaticBackdrop(content)"
+    ></i>
+    <div class="logo-brand">
+      <p class="font-30 px-3">Admin Management</p>
+    </div>
+  </div>
+</nav>
+<ng-template #content let-offcanvas>
+  <div class="offcanvas-header">
+    <h4 class="offcanvas-title">Admin Management</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="offcanvas.dismiss('Cross click')"
+    ></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="p-5">
+      <p class="menus font-20 text-center">Menus</p>
+      <hr />
+      <p class="font-20 text-center" (click)="offcanvas.close('Close click')">Dashboard</p>
+      <hr />
+      <p class="font-20 text-center" (click)="offcanvas.close('Close click')">User List</p>
+      <hr />
+      <p class="font-20 text-center" (click)="offcanvas.close('Close click')">Add User</p>
+      <hr />
+      <p class="font-20 text-center" (click)="offcanvas.close('Close click')">logout</p>
+      <hr />
+    </div>
+  </div>
+</ng-template>

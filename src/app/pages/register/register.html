@@ -1,0 +1,135 @@
+<section class="d-flex h-full bg">
+  <div class="container d-flex justify-content-center align-items-center">
+    <div class="box bg-filter rounded-4 shadow">
+      <p class="text-center font-30">Sign Up</p>
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="w-100">
+        <div class="row m-0 p-0">
+          <!-- First Name -->
+          <div class="col-sm-12 col-md-6">
+            <div class="d-flex justify-content-center align-items-center px-3 py-5">
+              <input
+                type="text"
+                placeholder="First Name"
+                class="border-0 px-5 py-2 rounded-3 font-20"
+                formControlName="firstName"
+              />
+            </div>
+            <div
+              *ngIf="signupForm.get('firstName')?.invalid && signupForm.get('firstName')?.touched"
+              class="text-danger text-center"
+            >
+              First name is required.
+            </div>
+          </div>
+          <!-- Last Name -->
+          <div class="col-sm-12 col-md-6">
+            <div class="d-flex justify-content-center align-items-center px-3 py-5">
+              <input
+                type="text"
+                placeholder="Last Name"
+                class="border-0 px-5 py-2 rounded-3 font-20"
+                formControlName="lastName"
+              />
+            </div>
+            <div
+              *ngIf="signupForm.get('lastName')?.invalid && signupForm.get('lastName')?.touched"
+              class="text-danger text-center"
+            >
+              Last name is required.
+            </div>
+          </div>
+          <!-- Email -->
+          <div class="col-sm-12 col-md-6">
+            <div class="d-flex justify-content-center align-items-center px-3 py-5">
+              <input
+                type="email"
+                placeholder="Email"
+                class="border-0 px-5 py-2 rounded-3 font-20"
+                formControlName="email"
+              />
+            </div>
+            <div
+              *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched"
+              class="text-danger text-center"
+            >
+              <div *ngIf="signupForm.get('email')?.errors?.['required']">Email is required.</div>
+              <div *ngIf="signupForm.get('email')?.errors?.['email']">Enter a valid email.</div>
+            </div>
+          </div>
+          <!-- Address -->
+          <div class="col-sm-12 col-md-6">
+            <div class="d-flex justify-content-center align-items-center px-3 py-5">
+              <input
+                type="text"
+                placeholder="Address"
+                class="border-0 px-5 py-2 rounded-3 font-20"
+                formControlName="Address"
+              />
+            </div>
+            <div
+              *ngIf="signupForm.get('Address')?.invalid && signupForm.get('Address')?.touched"
+              class="text-danger text-center"
+            >
+              Address is required.
+            </div>
+          </div>
+          <!-- Phone -->
+          <div class="col-sm-12 col-md-6">
+            <div class="d-flex justify-content-center align-items-center px-3 py-5">
+              <input
+                type="tel"
+                placeholder="Phone"
+                class="border-0 px-5 py-2 rounded-3 font-20"
+                formControlName="phone"
+              />
+            </div>
+            <div
+              *ngIf="signupForm.get('phone')?.invalid && signupForm.get('phone')?.touched"
+              class="text-danger text-center"
+            >
+              <div *ngIf="signupForm.get('phone')?.errors?.['required']">Phone is required.</div>
+              <div *ngIf="signupForm.get('phone')?.errors?.['pattern']">
+                Enter a valid 10-digit phone number.
+              </div>
+            </div>
+          </div>
+          <!-- Password -->
+          <div class="col-sm-12 col-md-6">
+            <div class="d-flex justify-content-center align-items-center px-3 py-5">
+              <input
+                type="password"
+                placeholder="Password"
+                class="border-0 px-5 py-2 rounded-3 font-20"
+                formControlName="password"
+              />
+            </div>
+            <div
+              *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched"
+              class="text-danger text-center"
+            >
+              <div *ngIf="signupForm.get('password')?.errors?.['required']">
+                Password is required.
+              </div>
+              <div *ngIf="signupForm.get('password')?.errors?.['minlength']">
+                Password must be at least 6 characters.
+              </div>
+            </div>
+          </div>
+          <!-- Submit Button -->
+          <div class="d-flex justify-content-center align-items-center py-3">
+            <button
+              type="submit"
+              class="px-5 py-2 border-0 rounded-4"
+              [disabled]="!signupForm.valid"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </form>
+      <p class="text-center font-20">
+        Goto <span class="underline" (click)="gotologin()">Login</span>
+      </p>
+    </div>
+  </div>
+</section>

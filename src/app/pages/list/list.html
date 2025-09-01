@@ -1,0 +1,38 @@
+<section>
+  <div class="d-flex justify-content-center align-items-center py-5">
+    <input type="text" class="form-control border-0 rounded-4 w-300" placeholder="Search..." />
+  </div>
+  <!------------->
+  <div class="card p-5">
+    <p-table
+      [value]="users"
+      [scrollable]="true"
+      scrollHeight="550px"
+      styleClass="p-datatable-striped"
+    >
+      <ng-template pTemplate="header">
+        <tr>
+          <th class="pb-2">ID</th>
+          <th class="pb-2">Name</th>
+          <th class="pb-2">Address</th>
+          <th class="pb-2">Email</th>
+          <th class="pb-2">Phone</th>
+          <th class="pb-2">Actions</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-product>
+        <tr>
+          <td class="p-2">{{ product._id }}</td>
+          <td class="p-2">{{ product.firstName }} {{ product.lastName }}</td>
+          <td class="p-2">{{ product.Address }}</td>
+          <td class="p-2">{{ product.email }}</td>
+          <td class="p-2">{{ product.phone }}</td>
+          <td class="p-2 d-flex gap-3">
+            <p><i class="fa-solid fa-user-pen" (click)="gotoedit(product._id)"></i></p>
+            <p><i class="fa-solid fa-trash" (click)="deleteUser(product._id)"></i></p>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</section>

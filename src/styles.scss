@@ -1,1 +1,113 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+@font-face {
+    font-family: 'Gellix';
+    src: url("../public/fonts/Gellix-Regular.ttf");
+}
+
+body {
+    font-family: 'Gellix';
+}
+
+.font-20 {
+    font-size: clamp(15px, 2vw, 24px);
+}
+
+.font-30 {
+    font-size: clamp(25px, 3vw, 30px);
+}
+
+.h-full {
+    height: 100vh;
+}
+
+.bg-filter {
+    backdrop-filter: blur(30px);
+}
+
+.w-300 {
+    width: 400px;
+}
+
+
+.bg-none {
+    background-color: transparent;
+    background: transparent;
+}
+
+.shadow {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.bg-1 {
+    background-color: #CADEFC;
+}
+
+.nav-color {
+    background-color: #F1F6F9;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.h-70 {
+    height: 80vh !important;
+}
+
+/* Customize the toast container */
+.p-toast {
+    opacity: 0.95;
+}
+
+/* Customize all toast messages */
+.p-toast-message {
+    background: white !important;
+    /* Light gray background */
+    border: none !important;
+    outline: none !important;
+    border-radius: 20px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    padding: 16px;
+    font-size: 20px;
+}
+
+/* Customize the toast icon */
+.p-toast-icon {
+    display: none !important;
+    font-size: 24px;
+}
+
+/* Customize the toast content */
+.p-toast-message-content {
+    color: #333333;
+    /* Dark gray text */
+}
+
+/* Customize the toast summary */
+.p-toast-summary {
+    font-weight: 600;
+    color: #333333;
+    /* Dark gray text */
+    font-size: 18px;
+}
+
+/* Customize the toast detail */
+.p-toast-detail {
+    font-size: 16px;
+    color: #333333;
+    /* Dark gray text */
+}
+
+/* Customize the toast close button */
+.p-toast-close-icon {
+    color: #666666;
+    /* Gray close button */
+}
