@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://your-deployed-backend.com/api',
+  apiUrl: 'https://dashboard-backend-kdb8.onrender.com/dashboard',
 };
