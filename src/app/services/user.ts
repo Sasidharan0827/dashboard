@@ -28,4 +28,7 @@ export class User {
   delete(id: string) {
     return this.http.delete(`${this.baseUrl}/user/delete/${id}`);
   }
+  search(data: any) {
+    return this.http.get(`${this.baseUrl}/user/search?query=${data}`);
+  }
 }

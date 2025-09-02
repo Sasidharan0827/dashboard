@@ -1,6 +1,11 @@
 <section>
   <div class="d-flex justify-content-center align-items-center py-5">
-    <input type="text" class="form-control border-0 rounded-4 w-300" placeholder="Search..." />
+    <input
+      type="text"
+      class="form-control border-0 rounded-4 w-300"
+      placeholder="Search..."
+      [formControl]="searchControl"
+    />
   </div>
   <!------------->
   <div class="card p-5">
